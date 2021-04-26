@@ -3,7 +3,6 @@
 require 'selenium-webdriver'
 require_relative '../../support/pages/login'
 require_relative '../../support/pages/home'
-require 'pry-byebug'
 
 Given('a valid user') do
   @browser = Selenium::WebDriver.for :firefox

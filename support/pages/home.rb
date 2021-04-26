@@ -5,5 +5,5 @@ require 'page-object'
 class HomePage
   include PageObject
 
-  div(:repositories, :id => 'repos-container')
+  div(:repositories, id: 'repos-container')
 end
