@@ -15,16 +15,16 @@ When('go to login page') do
   @page = LoginPage.new(@browser)
 end
 
-Then('login with user and pass') do
+And('login with user and pass') do
   @page.username = @user
   @page.password = @pass
   @page.login
+  sleep(2)
 end
 
 Then('the user is logged') do
 	@page = HomePage.new(@browser)
-	sleep(2)
-	@page.repositories.match @user
+	expect(@page.repositories).to match @user
 end
 
 Given('a invalid user') do
@@ -34,8 +34,7 @@ Given('a invalid user') do
 end
 
 Then('the login page show invalid user') do
-	sleep(2)
-	@page.error.match 'Incorrect username or password.'
+	expect(@page.error).to eq 'Incorrect username or password.'
 end
 
 Then('close browser') do
