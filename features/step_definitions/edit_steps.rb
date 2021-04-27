@@ -1,16 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../support/pages/profile'
-require 'pry-byebug'
-
 When('the user go to profile page') do
-  @browser.get 'https://github.com/egonzalez19'
+  @browser.get "https://github.com/#{@user}"
   @page = ProfilePage.new(@browser)
-  @bio = 'bio'
-  @company = 'company'
-  @location = 'location'
-  @website = 'website'
-  @twitter = 'username'
 end
 
 When('opens the profile edit') do

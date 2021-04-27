@@ -77,6 +77,19 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.10)
     regexp_parser (2.1.1)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     rubyzip (2.3.0)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
@@ -100,6 +113,8 @@ DEPENDENCIES
   cucumber
   page-object
   pry-byebug
+  rspec
+  rspec-expectations
   selenium-webdriver
 
 BUNDLED WITH

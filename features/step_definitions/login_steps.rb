@@ -1,12 +1,6 @@
 # frozen_string_literal: true
 
-require 'selenium-webdriver'
-require_relative '../../support/pages/login'
-require_relative '../../support/pages/home'
-
-Given('a valid user') do
-  @browser = Selenium::WebDriver.for :firefox
-  @user = 'egonzalez19'
+Given('a valid password') do
   @pass = 'P3l0t1t4!'
 end
 
@@ -27,16 +21,10 @@ Then('the user is logged') do
 	expect(@page.repositories).to match @user
 end
 
-Given('a invalid user') do
-  @browser = Selenium::WebDriver.for :firefox
-  @user = 'egonzalez'
+Given('an invalid password') do
   @pass = 'P3l0t'
 end
 
 Then('the login page show invalid user') do
 	expect(@page.error).to eq 'Incorrect username or password.'
-end
-
-Then('close browser') do
-	@browser.close
 end
