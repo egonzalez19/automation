@@ -10,9 +10,7 @@ When('go to login page') do
 end
 
 And('login with user and pass') do
-  @page.username = @user
-  @page.password = @pass
-  @page.login
+  @page.login_user(@user, @pass)
   sleep(2)
 end
 

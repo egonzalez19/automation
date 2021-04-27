@@ -2,7 +2,7 @@
 
 Before do
   @browser = Selenium::WebDriver.for :firefox
-  @repository_name = 'pepe'
+  @repository_name = 'proyect'
   @bio = 'bio'
   @company = 'company'
   @location = 'location'
