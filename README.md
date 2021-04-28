@@ -10,7 +10,7 @@
  - go to the root of the project
  - run **bundle install**
  - run **cucumber features/login.feature \
-                  **features/create_repository.feature \
-                  **features/edit_profile.feature \
-                  **features/watch.feature \
-                  **features/delete_repository.feature**
+                  features/create_repository.feature \
+                  features/edit_profile.feature \
+                  features/watch.feature \
+                  features/delete_repository.feature**
